@@ -7,3 +7,5 @@ Create a functional program that will analyse floral images to get a color perce
 ### Example
 > Bouquet.py <insert path to image><Image_name>
 > Image_name: RGB, Hexadecimal
+> Boquet.py Boom_Boom_White_1.jpeg
+> Boom Boom White: 255,255,255 #FFFFFF
