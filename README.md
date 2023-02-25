@@ -18,5 +18,5 @@ At this time to plan of the program is to use python to:
 > Boom Boom White: 255,255,255 #FFFFFF
 >
 
-### Example of 
+### Example of a potential 'arrangement' function 
 <img width="562" alt="Dahlia_Color_Gradient" src="https://user-images.githubusercontent.com/122850024/221379368-d33ddb3a-9e25-4494-bc18-e3ffca4684ce.png">
