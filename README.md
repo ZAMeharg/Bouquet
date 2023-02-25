@@ -11,8 +11,8 @@ At this time to plan of the program is to use python to:
 5. Using the 'arrangement' function to arrange the images into a .jpeg or .png image that will be sorted by color.
 
 ### Example
-> Bouquet.py <insert path to image><Image_name>
->> Image_name: RGB, Hexadecimal
+> Bouquet.py <insert path to image><Image_name> <br>
+> Image_name: RGB, Hexadecimal
 >
-> Boquet.py Boom_Boom_White_1.jpeg
->> Boom Boom White: 255,255,255 #FFFFFF
+> Boquet.py Boom_Boom_White_1.jpeg <br>
+> Boom Boom White: 255,255,255 #FFFFFF
