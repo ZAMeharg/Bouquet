@@ -16,3 +16,7 @@ At this time to plan of the program is to use python to:
 >
 > Boquet.py Boom_Boom_White_1.jpeg <br>
 > Boom Boom White: 255,255,255 #FFFFFF
+>
+
+### Example of 
+<img width="562" alt="Dahlia_Color_Gradient" src="https://user-images.githubusercontent.com/122850024/221379368-d33ddb3a-9e25-4494-bc18-e3ffca4684ce.png">
