@@ -1,14 +1,37 @@
 # Bouquet
-Created for BIOL 7180-D01 Scripting for Biologist @ Auburn University
+Created for BIOL 7180-D01 Scripting for Biologist @ Auburn University. This program was created to generate a final figure of images sorted by RGB, as well as create a pallete of colors from individial images. 
 
-## Goals of the program
-Create a functional program that will analyse floral images to get a color percentage in either RGB or Hexadecimal.
-At this time to plan of the program is to use python to:
-1. Read the image as an input
-2. Remove the background or make the background a solid color that will not appear in any of the flowers ex) Green
-3. Calculate the percentage of the dominant colors to generate a RGB and/or a Hexadecimal value
-4. Additional features that might be included would be a way to store the images in a vase.txt file that will have the location of all the images used in a round of image analysis
-5. Using the *arrangement* function to arrange the images into a .jpeg or .png image that will be sorted by color.
+## Getting Started
+Before running Bouquet, we will create a virtual environment using Python3 venv
+```
+mkdir venvs
+cd venvs
+module load python
+python3 -m venvs Bouquet
+```
+Now that we have created a folder for the Bouqet program, we will active that virtual environment.
+```
+sorce Bouquet/bin/activate
+```
+Now we can install all the required packages.
+```
+pip install -r requirements.txt
+```
+Within this requirements.txt file are installing the following packages:
+- math
+- cv2
+- os
+- glob
+- time
+- sys
+- sklearn.cluster
+- collections
+- skimage.color
+- matplotlib
+- numpy
+- Pillow
+- pathlib
+- rembg 
 
 ### Example
 > Bouquet.py <insert path to image><Image_name> <br>
@@ -16,7 +39,3 @@ At this time to plan of the program is to use python to:
 >
 > Boquet.py Boom_Boom_White_1.jpeg <br>
 > Boom Boom White: 255,255,255 #FFFFFF
->
-
-### Example of a potential *arrangement* function 
-<img width="562" alt="Dahlia_Color_Gradient" src="https://user-images.githubusercontent.com/122850024/221379368-d33ddb3a-9e25-4494-bc18-e3ffca4684ce.png">
