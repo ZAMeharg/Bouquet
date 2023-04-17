@@ -87,7 +87,7 @@ python3 Bouquet.py -a -d Test_Images -p Test_Figure
 ```
 That will create an image like the one below
 ---
-!(Final_Figure.png)
+![Alt text](Final_Figure.png)
 ---
 
 Next we will use the -s function to create a color pallete from the images of Greendor.png
@@ -96,5 +96,5 @@ python3 Bouquet.py -s Greendor.png -c 8
 ```
 This will create an image like below:
 ---
-!(Greendor_Pallate.png)
+![Alt text](Greendor_Pallate.png)
 ---
