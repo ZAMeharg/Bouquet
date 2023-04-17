@@ -6,7 +6,7 @@ Before running Bouquet, we will create a virtual environment using Python3 venv
 ```
 mkdir venvs
 cd venvs
-module load python
+#module load python #Do not need if you are not on a super computer or cluster
 python3 -m venv Bouquet
 ```
 Now that we have created a folder for the Bouqet program, we will active that virtual environment.
