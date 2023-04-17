@@ -1,15 +1,3 @@
-###### Requirements without Version Specifiers ######
-math
-cv2
-os
-glob
-time
-sys
-sklearn.cluster
-collections
-skimage.color
-
-
 ###### Requirements with Version Specifiers ######
 matplotlib == 3.3.4
 numpy == 1.23.5
