@@ -41,14 +41,17 @@ python3 Bouquet
 
 With flags:
 > -h 	--help					Shows the help message and exits the program
+>
 > -s	--single				Used for single image analysis
+>
 > -a	--arrangemnt			Uses the arrangement function of Bouquet, requires the -d flag
+>
 > -d 	--directory				The directory where the input images are stored
+>
 > -p	--project_name			The name of the project
+>
 > -c	--color_numbers			The number of colors required that will be outputted in the single use function
+>
 > -l	--light_mode			Puts the arrangement final image with a white backgroud
+>
 > -r	--remove_background		Removes the background of all the images in given directory 
-
-
-## Running Bouquet
-To use Bouquet the first thing we need to do is remove the backgrounds of all the images we are wishing to use in either one of the two functions of Bouquet.
