@@ -92,7 +92,7 @@ That will create an image like the one below
 
 Next we will use the -s function to create a color pallete from the images of Greendor.png
 ```
-python3 Bouquet.py -s Greendor.png -c 8
+python3 Bouquet.py -s Test_Images/Greendor.png -c 8 -p Greendor_Pallete
 ```
 This will create an image like below:
 ---
