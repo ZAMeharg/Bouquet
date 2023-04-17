@@ -61,16 +61,40 @@ Before running the single or the arrangement we need to remove the background fr
 This step can be completed with:
 ```
 python3 Bouquet.py -r -d <directory>
-```  
-
-
+```
 
 ### Single Use
+One of the main functions of the Bouquet program will allow us to find the most dominant colors from that image. 
 ```
 python3 Bouquet.py -s <image> -c <number of colors> 
 ```
 
 ### Arrangement Use
+The second of the two main functions will take all the images in given directory and generate an image that contains all the images once they have been sorted by their RGB values
 ```
 python3 Bouquet.py -a -d <directory> -p <project name>
 ```
+
+## Tutorial of Bouquet
+To test the start of the Bouquet script we will run the program on the test images provided. 
+The first step will be to remove the backgrounds of all the images: 
+```
+python3 Bouquet.py -r -d Test_Images
+```
+Next we will run the arrangement function to put all the images a final figure we will call Test_Figure.png
+```
+python3 Bouquet.py -a -d Test_Images -p Test_Figure
+```
+That will create an image like the one below
+---
+!(Final_Figure.png)
+---
+
+Next we will use the -s function to create a color pallete from the images of Greendor.png
+```
+python3 Bouquet.py -s Greendor.png -c 8
+```
+This will create an image like below:
+---
+!(Greendor_Pallate.png)
+---
