@@ -4,3 +4,4 @@ numpy == 1.23.5
 Pillow == 9.3.0
 pathlib == 1.0.1
 rembg == 2.0.30
+scikit-learn == 0.24.1
