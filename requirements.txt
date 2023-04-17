@@ -1,27 +1,18 @@
 ###### Requirements without Version Specifiers ######
-nose
-nose-cov
-beautifulsoup4
+math
+cv2
+os
+glob
+time
+sys
+sklearn.cluster
+collections
+skimage.color
+
 
 ###### Requirements with Version Specifiers ######
-docopt == 0.6.1             # Version Matching. Must be version 0.6.1
-keyring >= 4.1.1            # Minimum version 4.1.1
-coverage != 3.5             # Version Exclusion. Anything except version 3.5
-Mopidy-Dirble ~= 1.1        # Compatible release. Same as >= 1.1, == 1.*
-
-
-
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-import math
-import os
-from PIL import Image
-from skimage.color import rgb2lab, deltaE_cie76
-from collections import Counter
-from sklearn.cluster import KMeans
-import sys
-from pathlib import Path
-import glob
-import time
-from rembg import remove #For removing background
+matplotlib == 3.3.4
+numpy == 1.23.5
+Pillow == 9.3.0
+pathlib == 1.0.1
+rembg == 2.0.30
