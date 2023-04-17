@@ -11,7 +11,7 @@ python3 -m venv Bouquet
 ```
 Now that we have created a folder for the Bouqet program, we will active that virtual environment.
 ```
-sorce Bouquet/bin/activate
+source Bouquet/bin/activate
 ```
 Now we can install all the required packages.
 ```
