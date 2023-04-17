@@ -58,7 +58,8 @@ def get_colors(image, number_of_colors, show_chart, project):
         if i < len(ordered_colors):
             hex_color = RGB_HEX(ordered_colors[i])
             hex_colors.append(hex_color)
-    print(hex_colors)
+    if number_of_colors > 1:
+        print(hex_colors)
     rgb_colors = []
     for i in new_counts.keys():
         if i < len(ordered_colors):
