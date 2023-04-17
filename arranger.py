@@ -1,13 +1,3 @@
-'''This script has the code to do the arrangement image.
-Things this program needs to properally run:
-1) A list of images [X]
-2) A way to find the the GCF of the size of the list to crate the best possible matrix for that image [x]
-3) Removing the backgrounds from all the images using fi.remove_background [X]
-4) Get the most dominant color in each image after removing black from the color list [X]
-5) Sorting the overall list ot create the sorted matrix of colors
-6) Resize the image but keeping the correct quality of the image (eh not supper import for small images)
-7) Creating an image using that matix list
-'''
 import format_image as fi
 import color_analyzer as ca
 import cv2
@@ -17,30 +7,18 @@ import math
 import os
 from PIL import Image
 
-'''
-===========================================
-              picture_counter              
-===========================================
-input: directory
-
-output: num_pics, a
-
-
-def picture_counter(directory):
-	pic_list = fi.png_list(directory)
-	pic_list = set(pic_list)
-	num_pics = len(pic_list)
-	return num_pics
-'''
-
 def color_getter(directory):
+'''
+Color_getter only requires the directroy as an input.
+This function uses png_list and get_colors from format_image.py 
+and color_analyzer.py respectivally. The purpose of this function 
+is to create run color getter on every image in the pic_list. This
+give each image its own RGB code
+'''
     pic_list = fi.png_list(directory)
     #print(pic_list)
     pic_list = set(pic_list)
     num =len(pic_list)
-    #for image in pic_list:
-    #    fi.remove_background(directory)
-    #print(num)
     for image in pic_list:
         name = os.path.basename(image)
         rgb_colors = ca.get_colors(image,1,False)
@@ -49,7 +27,8 @@ def color_getter(directory):
         #print("Dominant color for "+name+":"+ "\t" + "RGB Code: "+str(rgb_colors))
         return rgb_colors
 
-def idk_anymore(directory):
+def image_colors(directory):
+
     image_data = {}
     pic_list = fi.png_list(directory)
     pic_list = set(pic_list)
@@ -63,7 +42,11 @@ def idk_anymore(directory):
     return image_data
 
 def create_matrix(directory):
-    image_data = idk_anymore(directory)
+'''
+This function creates a matrix depending on the number of images that are
+in the given directory'''
+
+    image_data = image_colors(directory)
     num_images = len(image_data)
 
     # Compute the number of rows and columns needed to fit all images
@@ -86,8 +69,13 @@ def create_matrix(directory):
 
 
 def vase(directory, project, mode):
+'''
+Vase requires directory, project, and mode as inputs.
+With the expected output being a final figure of the inputted images
+sorted by color.
+'''
     colors = {}
-    image_data = idk_anymore(directory)
+    image_data = image_colors(directory)
     rows = list(image_data.keys())
     for key, value in image_data.items():
         value_str = str(value[0])

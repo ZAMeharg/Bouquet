@@ -12,6 +12,8 @@ import os
 def RGB_HEX(color):
     return "#{:02x}{:02x}{:02x}".format(int(color[0]), int(color[1]), int(color[2]))
 
+
+def get_colors(image, number_of_colors, show_chart, project):
 '''
 The function get_colors will open an the image then change the shape. Since all these images are going to have their background removed
 cv2 will put in a black background. To make sure the program is not calling black as the most dominat color so we are looking at ways to remove it.
@@ -20,7 +22,6 @@ we can remove that value and that key corresponding to the value. Since we are r
 colors we are inputing. 
 The output of this code will give Hexcodes and RGB_codes. 
 '''
-def get_colors(image, number_of_colors, show_chart, project):
     picture = image
     pic=imageio.imread(image)
     image = cv2.imread(image)
