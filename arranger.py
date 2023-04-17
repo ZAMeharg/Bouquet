@@ -7,46 +7,46 @@ import math
 import os
 from PIL import Image
 
-def color_getter(directory):
-'''
-Color_getter only requires the directroy as an input.
-This function uses png_list and get_colors from format_image.py 
-and color_analyzer.py respectivally. The purpose of this function 
-is to create run color getter on every image in the pic_list. This
-give each image its own RGB code
-'''
+def color_getter(directory, project):
+    '''
+    Color_getter only requires the directroy as an input.
+    This function uses png_list and get_colors from format_image.py 
+    and color_analyzer.py respectivally. The purpose of this function 
+    is to create run color getter on every image in the pic_list. This
+    give each image its own RGB code
+    '''
     pic_list = fi.png_list(directory)
     #print(pic_list)
     pic_list = set(pic_list)
     num =len(pic_list)
     for image in pic_list:
         name = os.path.basename(image)
-        rgb_colors = ca.get_colors(image,1,False)
+        rgb_colors = ca.get_colors(image,1,False,project)
         rgb_colors = str(rgb_colors[0])
         rgb_colors = rgb_colors.replace('array(', '').replace(')', '')
         #print("Dominant color for "+name+":"+ "\t" + "RGB Code: "+str(rgb_colors))
         return rgb_colors
 
-def image_colors(directory):
+def image_colors(directory,project):
 
     image_data = {}
     pic_list = fi.png_list(directory)
     pic_list = set(pic_list)
-    rgb_colors = color_getter(directory)
+    rgb_colors = color_getter(directory,project)
     for name in pic_list:
-        rgb_colors = ca.get_colors(name,1,False)
+        rgb_colors = ca.get_colors(name,1,False,project)
        # read in image and process data
         color = rgb_colors
         image_data[name] = color
         image_data = dict(sorted(image_data.items(), key=lambda x: np.sum(x[1])))
     return image_data
 
-def create_matrix(directory):
-'''
-This function creates a matrix depending on the number of images that are
-in the given directory'''
+def create_matrix(directory,project):
+    '''
+    This function creates a matrix depending on the number of images that are
+    in the given directory'''
 
-    image_data = image_colors(directory)
+    image_data = image_colors(directory,project)
     num_images = len(image_data)
 
     # Compute the number of rows and columns needed to fit all images
@@ -69,13 +69,11 @@ in the given directory'''
 
 
 def vase(directory, project, mode):
-'''
-Vase requires directory, project, and mode as inputs.
-With the expected output being a final figure of the inputted images
-sorted by color.
-'''
+    '''Vase requires directory, project, and mode as inputs.
+    With the expected output being a final figure of the inputted images
+    sorted by color.'''
     colors = {}
-    image_data = image_colors(directory)
+    image_data = image_colors(directory,project)
     rows = list(image_data.keys())
     for key, value in image_data.items():
         value_str = str(value[0])
@@ -88,7 +86,7 @@ sorted by color.
     num_images = len(new_colors)
     num_rows = int(math.sqrt(num_images))
     num_cols = math.ceil(num_images / num_rows)
-    matrix = create_matrix(directory)
+    matrix = create_matrix(directory, project)
     cols = list(set(colors))
     for i, row in enumerate(rows):
         for j, col in enumerate(cols):

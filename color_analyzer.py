@@ -14,14 +14,14 @@ def RGB_HEX(color):
 
 
 def get_colors(image, number_of_colors, show_chart, project):
-'''
-The function get_colors will open an the image then change the shape. Since all these images are going to have their background removed
-cv2 will put in a black background. To make sure the program is not calling black as the most dominat color so we are looking at ways to remove it.
-The current method is taking removing the color that shows up the most since we are assuming that black will be the most prominant color,
-we can remove that value and that key corresponding to the value. Since we are removing a color we want to add one to out put the number of 
-colors we are inputing. 
-The output of this code will give Hexcodes and RGB_codes. 
-'''
+    '''
+    The function get_colors will open an the image then change the shape. Since all these images are going to have their background removed
+    cv2 will put in a black background. To make sure the program is not calling black as the most dominat color so we are looking at ways to remove it.
+    The current method is taking removing the color that shows up the most since we are assuming that black will be the most prominant color,
+    we can remove that value and that key corresponding to the value. Since we are removing a color we want to add one to out put the number of 
+    colors we are inputing. 
+    The output of this code will give Hexcodes and RGB_codes. 
+    '''
     picture = image
     pic=imageio.imread(image)
     image = cv2.imread(image)
