@@ -36,7 +36,7 @@ Within this requirements.txt file are installing the following packages:
 ## Running Bouquet
 The main line of code used to run Bouquet is:
 ```
-python3 Bouquet
+python3 Bouquet.py
 ```
 
 With flags:
@@ -55,3 +55,22 @@ With flags:
 > -l	--light_mode			Puts the arrangement final image with a white backgroud
 >
 > -r	--remove_background		Removes the background of all the images in given directory 
+
+### First Step in Running Bouquet
+Before running the single or the arrangement we need to remove the background from all the images sorted in the directory.
+This step can be completed with:
+```
+python3 Bouquet.py -r -d <directory>
+```  
+
+
+
+### Single Use
+```
+python3 Bouquet.py -s <image> -c <number of colors> 
+```
+
+### Arrangement Use
+```
+python3 Bouquet.py -a -d <directory> -p <project name>
+```
